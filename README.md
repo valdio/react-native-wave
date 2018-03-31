@@ -15,9 +15,13 @@ import {AnimatedHOC, Animation} from './lib'
       <View style={styles.container}>
         {
           AnimatedHOC(Card)
-           .applyAnimation(Animation.opacity, 0, 1, 1000)
-          // .applyAnimation(Animation.width, 0, 400, 1000)
-           .animate()
+                   // .applyAnimation(Animation.opacity, 0, 1, 1000)
+                     .applyAnimation(Animation.width, 2, 400, 1000)
+                     //   .applyAnimation(Animation.padding, 0, 25, 2000)
+                     .type(AnimationType.decay)
+                     .applyEasing(Easing.elastic())
+                     .applyDecayVelocity(0.07)
+                     .animate()
         }
       </View>
     )
@@ -25,4 +29,4 @@ import {AnimatedHOC, Animation} from './lib'
 ```
 
 
-![Demo](https://github.com/valdio/AnimatedHOC/blob/master/images/opacity%20animation.gif)
+![Demo](https://github.com/valdio/AnimatedHOC/blob/master/images/aniamtion.gif)

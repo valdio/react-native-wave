@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {
+  Easing,
   Platform,
   StyleSheet,
   Text,
@@ -7,7 +8,7 @@ import {
 } from 'react-native'
 
 import Card from './Example/components/Card'
-import {AnimatedHOC, Animation} from './lib/Index'
+import {AnimatedHOC, Animation, Composing, AnimationType} from './lib'
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -21,7 +22,11 @@ export default class App extends Component<Props> {
         {
           AnimatedHOC(Card)
           // .applyAnimation(Animation.opacity, 0, 1, 1000)
-            .applyAnimation(Animation.width, 0, 400, 1000)
+          //   .applyAnimation(Animation.width, 2, 400, 1000)
+            .applyAnimation(Animation.padding, 0, 50, 2000)
+            .type(AnimationType.spring)
+            .applyEasing(Easing.elastic())
+            .applyDecayVelocity(0.07)
             .animate()
         }
       </View>
