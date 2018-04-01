@@ -8,7 +8,7 @@ Example usage of the library:
 
 ```
 import Card from './Card' //card component
-import {AnimatedHOC, Animation} from './lib'
+import {AnimatedHOC, Animate, Composing, AnimationType} from './lib'
 
 
   render() {
