@@ -22,11 +22,12 @@ export default class App extends Component<Props> {
         {
           AnimatedHOC(Card)
           // .applyAnimation(Animation.opacity, 0, 1, 1000)
-          //   .applyAnimation(Animation.width, 2, 400, 1000)
-            .applyAnimation(Animation.padding, 0, 50, 2000)
-            .type(AnimationType.spring)
+            .applyAnimation(Animation.width, 2, 400, 1000)
+            .applyAnimation(Animation.padding, 0, 50, 2000, AnimationType.timing)
+            .type(AnimationType.decay)
             .applyEasing(Easing.elastic())
-            .applyDecayVelocity(0.07)
+            .applyDecayVelocity(0.7)
+            .applyComposition(Composing.parallel)
             .animate()
         }
       </View>
