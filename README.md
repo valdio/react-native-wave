@@ -15,17 +15,16 @@ import {AnimatedHOC, Animate, Composing, AnimationType} from './lib'
     return (
       <View style={styles.container}>
         {
-
             AnimatedHOC(Card)
-                      .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
-                      //   .applyAnimation(Animate.width, 2, 400, 1000)
-                      .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring,Easing.elastic())
-                      .applyAnimation(Animate.marginBottom, 0, 60, 2000)
-                      .type(AnimationType.spring)
-                      .applyEasing(Easing.bounce())
-                      // .applyDecayVelocity(0.07)
-                      .applyComposition(Composing.parallel)
-                      .animate()
+                   .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
+                   // .applyAnimation(Animate.width, 2, 400, 1000)
+                   .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring, Easing.elastic())
+                   .applyAnimation(Animate.marginBottom, 0, 60, 2000)
+                   .applyAnimationType(AnimationType.spring)
+                   .applyEasing(Easing.bounce())
+                   // .applyDecayVelocity(0.07)
+                   .applyComposition(Composing.parallel)
+                   .animate()
         }
       </View>
     )

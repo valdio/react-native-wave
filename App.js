@@ -8,7 +8,18 @@ import {
 } from 'react-native'
 
 import Card from './Example/components/Card'
-import {AnimatedHOC, Animate, Composing, AnimationType} from './lib'
+import {AnimatedHOC, Animate, Composing, AnimationType, stopAnimation} from './lib'
+
+const AnimatedCard = AnimatedHOC(Card)
+  .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
+  // .applyAnimation(Animate.width, 2, 400, 1000)
+  .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring, Easing.elastic())
+  .applyAnimation(Animate.marginBottom, 0, 60, 2000)
+  .applyAnimationType(AnimationType.spring)
+  .applyEasing(Easing.bounce())
+  // .applyDecayVelocity(0.07)
+  .applyComposition(Composing.parallel)
+  .animate()
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -16,24 +27,20 @@ export default class App extends Component<Props> {
     super(props)
   }
 
+
   render() {
     return (
       <View style={styles.container}>
-        {
-          AnimatedHOC(Card)
-            .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
-            //   .applyAnimation(Animate.width, 2, 400, 1000)
-            .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring,Easing.elastic())
-            .applyAnimation(Animate.marginBottom, 0, 60, 2000)
-            .type(AnimationType.spring)
-            .applyEasing(Easing.bounce())
-            // .applyDecayVelocity(0.07)
-            .applyComposition(Composing.parallel)
-            .animate()
-        }
+        {AnimatedCard}
       </View>
     )
   }
+
+  componentDidMount() {
+    // console.log(this.refs)
+    // this.refs.component.getAlert()
+  }
+
 
 }
 
@@ -44,6 +51,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF'
+
   },
   welcome: {
     fontSize: 20,
