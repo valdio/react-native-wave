@@ -1,22 +1,18 @@
 {
-  "name": "ReactNativeAnimatedHOC",
-  "version": "0.0.1",
-  "private": true,
+  "name": "react-native-wave",
+  "version": "0.0.2",
+  "description": "React Native animation library",
+  "main": "./lib/index.js",
+  "homepage": "https://github.com/valdio/Wave#readme",
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.2"
-  },
-  "devDependencies": {
-    "babel-jest": "23.0.0-alpha.0",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "22.4.2",
-    "react-test-renderer": "^16.3.0-alpha.1"
-  },
-  "jest": {
-    "preset": "react-native"
-  }
+  "keywords": [
+    "react",
+    "react-native",
+    "animation",
+    "animated api"
+  ],
+  "author": "Valdio Veliu",
+  "license": "MIT"
 }

@@ -1,29 +1,17 @@
-# Wave
-React Native animation library.
-
-## Getting started
-
- ```
- npm i react-native-wave --save
- ```
-
-## Usage
-
-Example usage of the library:
-
-```
-
 import React, {Component} from 'react'
 import {
   StyleSheet,
   View,
   Easing
 } from 'react-native'
+
 import Card from './app/components/Card'
-import {Wave, Animate, Composing, AnimationType} from '../lib'
+import {Wave, Animate, Composing, AnimationType} from 'react-native-wave'
 
 const AnimatedCard = Wave(Card)
   .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
+  // .applyAnimation(Animate.width, 2, 400, 1000)
+  // .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring, Easing.elastic())
   .applyAnimation(Animate.marginBottom, 0, 60, 2000)
   .applyAnimation(Animate.padding, 0, 40, 2000)
   .applyAnimationType(AnimationType.spring)
@@ -50,8 +38,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   }
 })
-
-```
-
-
-![Demo](https://github.com/valdio/AnimatedHOC/blob/master/images/anim.gif)
