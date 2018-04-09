@@ -8,9 +8,9 @@ import {
 } from 'react-native'
 
 import Card from './Example/components/Card'
-import {AnimatedHOC, Animate, Composing, AnimationType, stopAnimation} from './lib'
+import {Wave, Animate, Composing, AnimationType, stopAnimation} from './lib'
 
-const AnimatedCard = AnimatedHOC(Card)
+const AnimatedCard = Wave(Card)
 // .applyAnimation(Animate.opacity, 0, 1, 1000, AnimationType.timing, Easing.circle())
 // .applyAnimation(Animate.width, 2, 400, 1000)
 // .applyAnimation(Animate.padding, 0, 20, 2000, AnimationType.spring, Easing.elastic())
