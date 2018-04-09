@@ -1,4 +1,4 @@
-# Wave
+# 🌊 Wave 🌊
 React Native animation library.
 
 ## Getting started
