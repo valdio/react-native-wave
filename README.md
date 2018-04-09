@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
 ```
 
 
-![Demo](https://github.com/valdio/AnimatedHOC/blob/master/images/anim.gif)
+![Demo](https://github.com/valdio/Wave/blob/master/images/anim.gif)
