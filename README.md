@@ -13,9 +13,16 @@ React Native animation library.
  ## Full documentation
  For the full documentation and detailed examples read the [react-native-wave wiki](https://github.com/valdio/react-native-wave/wiki)
 
+## Animation examples
+|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/fade-in.gif)|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/bounce.gif)|
+| ------------- | ------------- |
+|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/fadein-bounce.gif)|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/anim.gif)|
+
+
+
 ## Usage
 
-Simple example of a fade in animation:
+An example including the suported methods. Check the docs to learn more on how to build your animations.
 
 ```
 import React, {Component} from 'react'
@@ -27,7 +34,12 @@ import Card from './app/components/Card'
 import {Wave, Animate} from 'react-native-wave'
 
 const AnimatedCard = Wave(Card)
-  .applyAnimation(Animate.opacity, 0, 1, 1000)
+  .applyAnimation(Animate.marginBottom, 0, 60, 500, AnimationType.timing, Easing.elastic(5))
+  .applyAnimation(Animate.opacity, 0, 1, 500, AnimationType.spring)
+  .applyAnimationType(AnimationType.spring)
+  .applyEasing(Easing.bounce())
+  .applyDecayVelocity(0.07)
+  .applyComposition(Composing.parallel)
   .animate()
 
 export default class App extends Component {
@@ -39,3 +51,6 @@ export default class App extends Component {
     )
   }
 }
+
+
+
