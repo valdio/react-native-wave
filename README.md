@@ -16,7 +16,7 @@ React Native animation library.
 ## Animation examples
 |![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/fade-in.gif)|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/bounce.gif)|
 | ------------- | ------------- |
-|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/fadein-bounce.gif)|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/anim.gif)|
+|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/fadein-bounce.gif)|![Screenshot](https://github.com/valdio/react-native-wave/blob/master/images/bounce-rotate.gif)|
 
 
 
