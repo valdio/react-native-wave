@@ -31,7 +31,7 @@ import {
   Easing
 } from 'react-native'
 import Card from './app/components/Card'
-import {Wave, Animate} from 'react-native-wave'
+import {Wave, Animate, AnimationType} from 'react-native-wave'
 
 const AnimatedCard = Wave(Card)
   .applyAnimation(Animate.marginBottom, 0, 60, 500, AnimationType.timing, Easing.elastic(5))
